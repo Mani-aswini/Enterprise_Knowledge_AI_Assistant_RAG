@@ -634,7 +634,7 @@ public class AiResearchAgent {
 
         // 1. Comprehensive Greetings: hi, hii, hlo, helo, hello, hey, howdy, hola, namaste, gm, sup, etc.
         String greetingWordPattern = "(h+l+o+|h+l+w+|h+e+l+o+|h+e+l+l+o+|h+e+l+l+o+w+|h+i+|h+a+i+|h+y+|h+y+e+|h+i+e+|h+e+y+|h+e+y+a+|h+e+y+l+o+|howdy|hola|greetings|namaste|aloha|bonjour|y+o+|sup|wassup|whatsup|wazzup|gm|ga|ge|gn)";
-        String targetWordPattern = "(\\s+(there|sir|maam|madam|buddy|friend|agent|ai|assistant|bot|team|all|everyone|folks|people|bro|agivant|portal))?";
+        String targetWordPattern = "(\\s+(there|sir|maam|madam|buddy|friend|agent|ai|assistant|bot|team|all|everyone|folks|people|bro|portal))?";
 
         if (normalized.matches("^" + greetingWordPattern + targetWordPattern + "$") ||
                 normalized.matches("^good\\s+(morning|afternoon|evening|day|noon|night)" + targetWordPattern + "$") ||
@@ -747,7 +747,7 @@ public class AiResearchAgent {
                 normalized.contains("what is your name") || normalized.contains("what can you do") ||
                 normalized.contains("help") || normalized.contains("what do you do") || normalized.contains("capabilities")) {
             refCategory = "CONV-HELP";
-            answer = "Hello " + firstName + "! I am your **Agivant Enterprise AI Assistant** 🤖.\n\n"
+            answer = "Hello " + firstName + "! I am your **Enterprise AI Assistant** 🤖.\n\n"
                     + "I combine enterprise search with real-time employee and HR records to give you quick, reliable workplace answers.\n\n"
                     + "**Here are key things you can ask me:**\n"
                     + "• **Your Profile**: Type *\"give me details about me\"* to view your official employee ID, department, location, and reporting manager.\n"
@@ -762,7 +762,7 @@ public class AiResearchAgent {
         else {
             refCategory = "CONV-GREETING";
             answer = "Hello " + firstName + "! 👋\n\n"
-                    + "Welcome to the **Agivant Knowledge Portal AI Assistant**. I'm here to assist you with workplace information, company policies, and employee records.\n\n"
+                    + "Welcome to the **Knowledge Portal AI Assistant**. I'm here to assist you with workplace information, company policies, and employee records.\n\n"
                     + "**Quick things you can ask:**\n"
                     + "• *\"Give me details about me\"* — View your verified profile, designation, and reporting manager.\n"
                     + "• *\"How many leaves do I have?\"* — Check your 2026 leave and WFH balances.\n"
@@ -775,7 +775,7 @@ public class AiResearchAgent {
 
         CitationSource assistantCitation = new CitationSource(
                 0L,
-                "Agivant Enterprise AI Assistant",
+                "Enterprise AI Assistant",
                 1,
                 "Conversational Chat & Assistant Overview",
                 0,

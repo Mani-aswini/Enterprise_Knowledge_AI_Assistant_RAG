@@ -1,4 +1,4 @@
-# Agivant Knowledge Portal - Internal AI Assistant with RAG
+# Knowledge Portal - Internal AI Assistant with RAG
 
 [![Java](https://img.shields.io/badge/Java-21%20LTS-orange.svg)](https://www.oracle.com/java/)
 [![Spring Boot](https://img.shields.io/badge/Spring%20Boot-3.3.4-brightgreen.svg)](https://spring.io/projects/spring-boot)
@@ -242,7 +242,7 @@ cp .env.example .env
 ```
 Default parameters in `src/main/resources/application.properties`:
 ```properties
-server.port=8080
+server.port=8085
 spring.datasource.url=${DB_URL:jdbc:mysql://localhost:3306/knowledge_portal_db?createDatabaseIfNotExist=true&useSSL=false&serverTimezone=UTC&allowPublicKeyRetrieval=true}
 spring.datasource.username=${DB_USERNAME:root}
 spring.datasource.password=${DB_PASSWORD:root}
@@ -280,7 +280,7 @@ Started KnowledgePortalApplication in ... seconds (process running ...)
 
 Once the backend is running, open your web browser and navigate to:
 ```
-http://localhost:8080/
+http://localhost:8085/
 ```
 
 ### Pre-Configured Test Personas:

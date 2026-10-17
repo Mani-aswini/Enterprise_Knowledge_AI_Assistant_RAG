@@ -41,7 +41,7 @@ document.addEventListener('DOMContentLoaded', () => {
 function initTheme() {
     let savedTheme = 'light';
     try {
-        savedTheme = localStorage.getItem('agivant_portal_theme') || 'light';
+        savedTheme = localStorage.getItem('knowledge_portal_theme') || 'light';
     } catch (e) {}
     applyTheme(savedTheme);
 
@@ -67,7 +67,7 @@ function initTheme() {
 function applyTheme(theme) {
     document.documentElement.setAttribute('data-theme', theme);
     try {
-        localStorage.setItem('agivant_portal_theme', theme);
+        localStorage.setItem('knowledge_portal_theme', theme);
     } catch (e) {}
 
     const isDark = (theme === 'dark');
@@ -326,7 +326,7 @@ function applyUserPermissions(user) {
     }
 
     if (headerTitle) {
-        headerTitle.textContent = 'Agivant Knowledge Portal';
+        headerTitle.textContent = 'Knowledge Portal';
     }
     if (headerSubtitle) {
         if (isAdmin) {
@@ -401,7 +401,7 @@ function applyUserPermissions(user) {
     const aiSectionHeading = document.getElementById('aiSectionHeading');
     const aiSectionDesc = document.getElementById('aiSectionDesc');
     if (aiSectionHeading) {
-        aiSectionHeading.textContent = 'Agivant AI Assistant';
+        aiSectionHeading.textContent = 'AI Assistant';
     }
     if (aiSectionDesc) {
         aiSectionDesc.textContent = isAdminOrHr
@@ -541,7 +541,7 @@ function initPortalSidebarToggle() {
         }
         if (save) {
             try {
-                localStorage.setItem('agivant_portal_sitemap_collapsed', collapsed ? 'true' : 'false');
+                localStorage.setItem('knowledge_portal_sitemap_collapsed', collapsed ? 'true' : 'false');
             } catch (err) {}
         }
     }
@@ -553,7 +553,7 @@ function initPortalSidebarToggle() {
 
     // Restore saved state
     try {
-        const savedState = localStorage.getItem('agivant_portal_sitemap_collapsed');
+        const savedState = localStorage.getItem('knowledge_portal_sitemap_collapsed');
         if (savedState === 'true') {
             setSidebarCollapsed(true, false);
         } else {
@@ -2015,11 +2015,14 @@ function summarizeConversationTitle(query, secondaryQuery = '') {
     const lower = raw.toLowerCase();
 
     // Domain recognizers for instant accurate titles
-    if (lower.includes('agivant') && (lower.includes('hyderabad') || lower.includes('location') || lower.includes('office') || lower.includes('present in'))) {
-        return 'Agivant Hyderabad Office';
+    if ((lower.includes('company') || lower.includes('enterprise') || lower.includes('portal')) && (lower.includes('hyderabad') || lower.includes('location') || lower.includes('office') || lower.includes('present in'))) {
+        return 'Hyderabad Office';
     }
-    if (lower.includes('agivant') && (lower.includes('about') || lower.includes('company') || lower.includes('overview') || lower.includes('who is') || lower.includes('what is agivant'))) {
-        return 'Agivant Corporate Overview';
+    if (lower.includes('hyderabad') && (lower.includes('office') || lower.includes('location') || lower.includes('present in'))) {
+        return 'Hyderabad Office';
+    }
+    if (lower.includes('about') || lower.includes('company') || lower.includes('overview') || lower.includes('who is') || lower.includes('what is the company')) {
+        return 'Corporate Overview';
     }
     if (lower.includes('carry-over') || lower.includes('carry over')) {
         return 'Annual Leave Carry-Over Policy';
@@ -2049,7 +2052,7 @@ function summarizeConversationTitle(query, secondaryQuery = '') {
         /^(please\s+)?give\s+me\s+(details|information|info)?(\s+about)?\s+/i,
         /^(what\s+is|what\s+are|what's)\s+(the\s+)?/i,
         /^(how\s+many|how\s+much|how\s+do|how\s+can|how\s+to)\s+/i,
-        /^(is\s+there|are\s+there|is\s+it|is\s+agivant)\s+/i,
+        /^(is\s+there|are\s+there|is\s+it)\s+/i,
         /^(in\s+which\s+location\s+is\s+there|which\s+location\s+is\s+there)\s*/i,
         /^(do\s+we\s+have|does\s+company\s+have)\s+/i,
         /^(i\s+want\s+to\s+know\s+about|i\s+need\s+to\s+know\s+about)\s+/i,
@@ -2324,9 +2327,9 @@ function renderChatWelcomeState() {
     stream.innerHTML = `
         <div class="chat-welcome-card" id="chatWelcomeCard">
             <div class="chat-welcome-avatar">
-                <img src="images/agivant-logo-gradient.png" alt="Agivant AI" class="welcome-logo-img">
+                <img src="images/portal-logo.png" alt="AI Assistant" class="welcome-logo-img">
             </div>
-            <h3>Welcome to Agivant AI Assistant</h3>
+            <h3>Welcome to AI Assistant</h3>
             <p>Ask questions in plain English. The agent searches approved company documents within your clearance level, performs multi-evidence synthesis, and provides exact citations.</p>
             <div class="welcome-suggestions-grid">
                 <button type="button" class="welcome-suggestion-btn" data-query="How many leaves did I have?">
@@ -2584,13 +2587,13 @@ function appendAssistantMessage(data, timestamp, shouldScroll = true, turnId = n
         msgRow.setAttribute('data-turn-ref', turnId);
     }
     msgRow.innerHTML = `
-        <div class="chat-msg-avatar assistant-avatar" title="Agivant AI Assistant">
-            <img src="images/agivant-logo-gradient.png" alt="Agivant AI" class="avatar-mini">
+        <div class="chat-msg-avatar assistant-avatar" title="AI Assistant">
+            <img src="images/portal-logo.png" alt="AI Assistant" class="avatar-mini">
         </div>
         <div class="chat-message-body">
             <div class="chat-bubble assistant-bubble">
                 <div class="bubble-header">
-                    <span class="bubble-assistant-name">Agivant AI Assistant</span>
+                    <span class="bubble-assistant-name">AI Assistant</span>
                     <span class="bubble-ref-tag">${escapeHtml(answerRef)}</span>
                 </div>
                 <div class="bubble-content-text">
@@ -2822,7 +2825,7 @@ async function sendChatMessage(questionText) {
         typingIndicator.style.display = 'flex';
         const typingText = document.getElementById('chatTypingText') || typingIndicator.querySelector('.typing-text');
         if (typingText) {
-            typingText.textContent = 'Agivant AI is thinking...';
+            typingText.textContent = 'AI Assistant is thinking...';
         }
         let step = 0;
         typingInterval = setInterval(() => {

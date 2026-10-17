@@ -441,15 +441,15 @@
     border-bottom-color: #1e293b !important;
 }
 
-/* Agivant logo avatar & brand badges - kept crisp white only in all themes */
+/* Portal logo avatar & brand badges - kept crisp white only in all themes */
 .chat-agent-avatar,
 .chat-welcome-avatar,
 .chat-msg-avatar.assistant-avatar,
-.brand-icon.brand-icon-agivant,
+.brand-icon.brand-icon-portal,
 [data-theme="dark"] .chat-agent-avatar,
 [data-theme="dark"] .chat-welcome-avatar,
 [data-theme="dark"] .chat-msg-avatar.assistant-avatar,
-[data-theme="dark"] .brand-icon.brand-icon-agivant {
+[data-theme="dark"] .brand-icon.brand-icon-portal {
     background: #ffffff !important;
     background-color: #ffffff !important;
     border: 1px solid #e2e8f0 !important;
@@ -650,7 +650,7 @@
     box-shadow: 0 10px 35px rgba(0, 0, 0, 0.6) !important;
 }
 
-/* Agivant welcome avatar is maintained crisp white in dark theme */
+/* Portal welcome avatar is maintained crisp white in dark theme */
 
 [data-theme="dark"] .chat-welcome-card h3 {
     color: #f8fafc !important;
@@ -1255,15 +1255,15 @@
     color: #6ee7b7 !important;
 }
 
-/* 12. Reaffirm Agivant Logo White in all themes */
+/* 12. Reaffirm Portal Logo White in all themes */
 .chat-agent-avatar,
 .chat-welcome-avatar,
 .chat-msg-avatar.assistant-avatar,
-.brand-icon.brand-icon-agivant,
+.brand-icon.brand-icon-portal,
 [data-theme="dark"] .chat-agent-avatar,
 [data-theme="dark"] .chat-welcome-avatar,
 [data-theme="dark"] .chat-msg-avatar.assistant-avatar,
-[data-theme="dark"] .brand-icon.brand-icon-agivant {
+[data-theme="dark"] .brand-icon.brand-icon-portal {
     background: #ffffff !important;
     background-color: #ffffff !important;
     border: 1px solid #e2e8f0 !important;
@@ -1328,7 +1328,7 @@ body {
     box-shadow: 0 2px 8px rgba(79, 70, 229, 0.4);
 }
 
-.brand-icon.brand-icon-agivant {
+.brand-icon.brand-icon-portal {
     background: #ffffff !important;
     background-color: #ffffff !important;
     border: 1px solid #e2e8f0 !important;
@@ -1337,7 +1337,7 @@ body {
     overflow: hidden;
 }
 
-.agivant-nav-logo {
+.portal-nav-logo {
     width: 34px;
     height: 34px;
     object-fit: contain;
@@ -3008,8 +3008,8 @@ body {
     margin-bottom: 2rem;
 }
 
-.brand-agivant-logo-wrap,
-.auth-brand-wrap .brand-agivant-logo-wrap {
+.brand-portal-logo-wrap,
+.auth-brand-wrap .brand-portal-logo-wrap {
     width: auto;
     height: auto;
     min-width: 0;
@@ -3026,16 +3026,16 @@ body {
     padding: 0 !important;
 }
 
-[data-theme="dark"] .brand-agivant-logo-wrap,
-[data-theme="dark"] .auth-brand-wrap .brand-agivant-logo-wrap {
+[data-theme="dark"] .brand-portal-logo-wrap,
+[data-theme="dark"] .auth-brand-wrap .brand-portal-logo-wrap {
     background: transparent !important;
     background-color: transparent !important;
     border: none !important;
     box-shadow: none !important;
 }
 
-.agivant-brand-logo,
-.auth-brand-wrap .agivant-brand-logo {
+.portal-brand-logo,
+.auth-brand-wrap .portal-brand-logo {
     width: auto;
     height: 52px;
     max-width: 100px;
@@ -3044,8 +3044,8 @@ body {
     transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1), filter 0.25s ease;
 }
 
-.agivant-brand-logo:hover,
-.auth-brand-wrap .agivant-brand-logo:hover {
+.portal-brand-logo:hover,
+.auth-brand-wrap .portal-brand-logo:hover {
     transform: scale(1.05);
     filter: drop-shadow(0 6px 18px rgba(37, 99, 235, 0.30));
 }

@@ -33,8 +33,8 @@ COPY --from=builder /build/target/*.jar app.jar
 RUN chown appuser:appgroup app.jar
 
 # Render injects PORT dynamically (typically 10000 or custom)
-ENV PORT=8080
-ENV SERVER_PORT=8080
+ENV PORT=8085
+ENV SERVER_PORT=8085
 EXPOSE ${PORT}
 
 # Run as non-root user

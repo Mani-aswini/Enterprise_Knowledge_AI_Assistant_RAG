@@ -1,7 +1,7 @@
 # REST API Specification & Examples
 ## Enterprise Knowledge Portal with AI Research Agent
 
-Base URL: `http://localhost:8080`
+Base URL: `http://localhost:8085`
 
 All endpoints under `/api/knowledge/**` require authentication via HTTP Basic Auth or active session cookie.
 

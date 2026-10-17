@@ -127,7 +127,7 @@ public class AiClient {
                 "1. Natural Real AI Synthesis: DO NOT just quote raw lines or dump disjointed snippets. Synthesize the facts into a polished, natural, coherent, and articulate response written in proper words—exactly like a senior AI research specialist.\n" +
                 "2. Direct Finding First: State the main answer or direct finding immediately in your opening sentence.\n" +
                 "3. Document Inquiries & Table of Contents (e.g. 'details about Bolt table of content', 'outline of document', 'what sections are in Bolt'):\n" +
-                "   - Clearly identify the document (e.g., 'In the **Agivant BOLT Guide** (*Bolt*), the Table of Contents comprises:').\n" +
+                "   - Clearly identify the document (e.g., 'In the **BOLT Guide** (*Bolt*), the Table of Contents comprises:').\n" +
                 "   - Present the FULL, complete numbered list of all chapters and sections in sequential order.\n" +
                 "   - Explain the core purpose, methodology, and workflow described in the document based on the evidence.\n" +
                 "4. Personal Employee & Profile Questions (e.g., 'give me the data about me', 'my name', 'my work location', 'who am I', 'my profile', 'how many leaves did I have'):\n" +

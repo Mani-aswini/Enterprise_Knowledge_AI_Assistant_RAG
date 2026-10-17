@@ -1,10 +1,10 @@
-# AGIVANT KNOWLEDGE PORTAL (Enterprise KG-RAG)
+# KNOWLEDGE PORTAL (Enterprise KG-RAG)
 ## Comprehensive Technical Architecture & Scenario Documentation
 
 ---
 
 ### Document Overview
-- **Project Name:** Agivant Knowledge Portal (`Enterprise_KG_RAG`)
+- **Project Name:** Knowledge Portal (`Enterprise_KG_RAG`)
 - **System Classification:** Enterprise Knowledge Management & Retrieval-Augmented Generation (RAG) Platform
 - **Target Audience:** Engineering Management, Architecture Review Boards, Technical Leads
 - **Document Version:** 1.0.0
@@ -22,7 +22,7 @@ Modern enterprises face severe friction in internal information discovery:
 4. **Disconnected Employee Services:** Employee directory information, department metadata, and leave balances are kept isolated from the central enterprise knowledge base.
 
 ### 1.2 Solution & Value Proposition
-The **Agivant Knowledge Portal** is an enterprise-grade platform integrating:
+The **Knowledge Portal** is an enterprise-grade platform integrating:
 - **Zero-Trust Role-Based Access Control (RBAC):** Hierarchical clearance boundaries (`PUBLIC`, `EMPLOYEE`, `HR_ONLY`, `CONFIDENTIAL`).
 - **Verifiable RAG AI Engine:** AI responses generated with strict document chunk citations (`[Document Title, Chunk #]`) backed by Google Gemini API and a deterministic extractive synthesis fallback.
 - **Automated Ingestion Pipeline:** Automated parsing (.pdf/.txt), semantic chunking, and version tracking.

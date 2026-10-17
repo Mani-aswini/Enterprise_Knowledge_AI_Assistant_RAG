@@ -1,6 +1,6 @@
 services:
   - type: web
-    name: agivant-knowledge-portal
+    name: knowledge-portal
     runtime: docker
     plan: free
     dockerfilePath: ./Dockerfile
